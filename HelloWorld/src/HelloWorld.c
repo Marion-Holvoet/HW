@@ -20,6 +20,12 @@ int main(void) {
 		char line[80];
 		sprintf(line, "WatchData size is %ld bytes", sizeof(WatchData));
 		puts(line);
+		WatchData wd;
+		sprintf(line, "unsigned long long size is %ld bytes", sizeof(wd.timestamp));
+		puts(line);
+		sprintf(line, "float size is %ld bytes", sizeof(wd.gyroscope.drift.z));
+		puts(line);
+
 	}
 
 	puts("Bye Cruel World");
