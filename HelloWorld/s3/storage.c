@@ -27,7 +27,7 @@ static int lgBufferInChar=0;
 int stCapacityInWatchData() {
 	return getAsWatchDataArray().max;
 }
-int stCapacityInBytes() {
+int stCapacityInChars() {
 	return getAsCharArray().max;
 }
 
