@@ -18,7 +18,7 @@ typedef struct {
 		struct {
 			float x, y, z;
 		} drift;
-	};
+	} gyroscope;
 } WatchData;
 
 #endif /* WATCHDATA_H_ */
