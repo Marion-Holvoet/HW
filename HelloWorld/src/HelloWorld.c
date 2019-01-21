@@ -12,7 +12,7 @@
 #include <stdlib.h>
 
 int main(void) {
-	puts("!!!Hello World!!!"); /* prints !!!Hello World!!! */
+	puts("!!!Hello World Marion!!!"); /* prints !!!Hello World!!! */
 	puts("Bye Cruel World");
 	return EXIT_SUCCESS;
 }
