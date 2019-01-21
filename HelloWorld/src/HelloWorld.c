@@ -11,9 +11,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#include "../s3/watchData.h"
+
 int main(void) {
 	puts("!!!Hello World Marion!!!"); /* prints !!!Hello World!!! */
-	puts("Another print Marion");
+
+	{
+		char line[80];
+		sprintf(line, "WatchData size is %ld bytes", sizeof(WatchData));
+		puts(line);
+	}
+
 	puts("Bye Cruel World");
 
 	return EXIT_SUCCESS;
