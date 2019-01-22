@@ -34,7 +34,7 @@ int stCapacityInChars() {
 // Percentage filled
 double stPercentageFilled() {
 	double result = lgBufferInChar;
-	return result/stCapacityInBytes();
+	return result/stCapacityInChars();
 }
 
 // Write
@@ -44,8 +44,9 @@ void stMakeEmpty() {
 
 // Returns 0 if full, 1 otherwise
 int stAddWatchData(WatchData wd) {
-	return stAddChars((const char*)&wd,
+	int result = stAddChars((const char*)&wd,
 			sizeof(wd));
+	return (result==0)?0:1;
 }
 
 // Returns 0 if full, actual number
@@ -53,7 +54,7 @@ int stAddWatchData(WatchData wd) {
 int stAddChars(const char* data, int lg) {
 	int result = 0;
 	for (int i=0; i<lg; i++) {
-		if (lgBufferInChar < (stCapacityInBytes()-1)) {
+		if (lgBufferInChar < (stCapacityInChars()-1)) {
 			// Can add one more
 			buffer.charArray[lgBufferInChar] = data[i];
 			lgBufferInChar++;
