@@ -37,6 +37,8 @@ double stPercentageFilled() {
 	return result/stCapacityInChars();
 }
 
+
+
 // Write
 void stMakeEmpty() {
 	lgBufferInChar = 0;
